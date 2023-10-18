@@ -34,7 +34,7 @@ void printBst(Node *root) {
 bool searchBST(Node *root, int key) {
     if (root == NULL) return false;
     if (root->key == key) return true;
-    if (key < root->key) searchBST(root->left, key);
+    if (key < root->key) return searchBST(root->left, key);
     return searchBST(root->right, key);
 }
 
